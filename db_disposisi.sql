@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 02, 2023 at 07:22 PM
+-- Generation Time: Jul 03, 2023 at 10:30 AM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.4.7
 
@@ -580,7 +580,7 @@ INSERT INTO `user` (`id_user`, `username`, `password`, `nama_pengguna`, `email`,
 --
 DROP TABLE IF EXISTS `disposisi_masuk`;
 
-CREATE ALGORITHM=UNDEFINED ` SQL SECURITY DEFINER VIEW `disposisi_masuk`  AS  select `disposisi`.`id_disposisi` AS `id_disposisi`,`disposisi`.`id_surat` AS `id_surat`,`disposisi`.`sifat_surat` AS `sifat_surat`,`disposisi`.`catatan` AS `catatan`,`disposisi`.`id_user` AS `id_user` from `disposisi` ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `disposisi_masuk`  AS  select `disposisi`.`id_disposisi` AS `id_disposisi`,`disposisi`.`id_surat` AS `id_surat`,`disposisi`.`sifat_surat` AS `sifat_surat`,`disposisi`.`catatan` AS `catatan`,`disposisi`.`id_user` AS `id_user` from `disposisi` ;
 
 --
 -- Indexes for dumped tables
